@@ -751,7 +751,7 @@
                             <span class="text-sm text-white/50 relative top-[-2px]">Free Tier</span>
                         </div>
                         <div
-                            class="w-12 h-12 rounded-full relative p-[2px] bg-gradient-to-tr from-[#9b51e0] via-[#ff3b3b] to-[#f2994a] shadow-lg">
+                            class="w-12 h-12 rounded-full relative p-[2px] bg-gradient-to-tr from-zinc-600 via-zinc-400 to-stone-500 shadow-lg">
                             <div
                                 class="w-full h-full bg-[#1a1a1a] rounded-full overflow-hidden flex items-center justify-center border-2 border-[#121212]">
                                 <img id="menu-avatar-small" src="" class="w-full h-full object-cover hidden">
@@ -764,28 +764,23 @@
                         </div>
                     </div>
 
+                    <div class="menu-item clickable flex items-center gap-4 py-3 px-4 rounded-xl">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-80">
+                            <path d="M9 18V5l12-2v13"></path>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <circle cx="18" cy="16" r="3"></circle>
+                        </svg>
+                        <span class="text-[15px] font-semibold tracking-wide">Your Library</span>
+                    </div>
+
                     <div class="menu-item clickable flex items-center gap-4 py-3 px-4 rounded-xl" onclick="openModal()">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-80">
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
-                        <span class="text-[15px] font-semibold tracking-wide">Profile</span>
-                    </div>
-
-                    <div class="menu-item clickable flex items-center justify-between py-3 px-4 rounded-xl">
-                        <div class="flex items-center gap-4">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-80">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                <polyline points="7 10 12 15 17 10"></polyline>
-                                <line x1="12" y1="15" x2="12" y2="3"></line>
-                            </svg>
-                            <span class="text-[15px] font-semibold tracking-wide">Import</span>
-                        </div>
-                        <div
-                            class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-sm font-black">
-                            +</div>
+                        <span class="text-[15px] font-semibold tracking-wide">Edit Profile</span>
                     </div>
 
                     <div class="menu-item clickable flex items-center justify-between py-3 px-4 rounded-xl">
@@ -806,15 +801,13 @@
                         </span>
                     </div>
 
-                    <div class="menu-item clickable flex items-center gap-4 py-3 px-4 rounded-xl" onclick="openModal()">
+                    <div class="menu-item clickable flex items-center gap-4 py-3 px-4 rounded-xl">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-80">
-                            <circle cx="12" cy="12" r="3"></circle>
-                            <path
-                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
-                            </path>
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
                         </svg>
-                        <span class="text-[15px] font-semibold tracking-wide">Settings</span>
+                        <span class="text-[15px] font-semibold tracking-wide">Playback Settings</span>
                     </div>
 
                     <div class="menu-divider h-px bg-white/10 mx-4 my-2"></div>
@@ -826,7 +819,7 @@
                             <line x1="12" y1="16" x2="12" y2="12"></line>
                             <line x1="12" y1="8" x2="12.01" y2="8"></line>
                         </svg>
-                        <span class="text-[15px] font-semibold tracking-wide text-white/70">Help center</span>
+                        <span class="text-[15px] font-semibold tracking-wide text-white/70">Support</span>
                     </div>
 
                     <div class="menu-item clickable flex items-center gap-4 py-3 px-4 rounded-xl">
