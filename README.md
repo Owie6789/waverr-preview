@@ -1,16 +1,21 @@
+> Made this update because funny enough, this was my first ever serious project lmao, I didn't even know how to use git or github😭, if any beginner ever sees this, don't give up, I went from being so proud of myself for making this in HTML and now I comfortably write Rust, anyways it turns out I had this locally 7 months after, and I didn't even know how to push shii, so here it is, issues known, search doesn't work, no debouncing so alot of imported songs gets laggy. If you need an actual music player check out **Nora** https://github.com/Sandakan/Nora/ | https://noramusic.netlify.app/
+I ended up working on Nora to rekindle my music player flair.
+
+<br>
+
 <p align="center">
   <img src="https://i.ibb.co/MybpdbZT/image.png" 
-       alt="Waverr 2.0 Banner" 
+       alt="Waverr 3.0 Banner" 
        width="51%" 
        style="border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.5); image-rendering: -webkit-optimize-contrast;">
 </p>
 
 <p align="center">
-  <h1 align="center">Waverr | Music Discovery 2.0</h1>
+  <h1 align="center">Waverr | Music Discovery 3.0</h1>
   <p align="center">
-    <strong>The definitive offline-first high-fidelity playback engine.</strong> 
+    <strong>An offline-first browser audio player with Web Audio DSP.</strong> 
     <br />
-    Engineering studio-grade DSP logic into a "Midnight Glass" aesthetic.
+    Built-in signal processing and a dark glass interface.
     <br />
     <br />
     <a href="https://owie6789.github.io/waverr-preview/"><strong>Live Production Preview »</strong></a>
@@ -35,71 +40,65 @@
 
 ---
 
-### ✨ The Waverr Philosophy
+### About Waverr
 
-Waverr 2.0 is a high-performance, **stateless offline-first** Progressive Web App (PWA). It acts as a bridge between your local hardware and professional audio engineering, offering a "Privacy-First" alternative to cloud streaming by keeping 100% of your data on your machine.
+Waverr 3.0 is an offline-first Progressive Web App (PWA) for playing local audio files. All track data, metadata, and audio processing remain entirely on your device.
 
 ---
 
-### 🎧 Core Features: The DSP Engine
+### 🎧 Audio Features
 
-At the heart of Waverr is a sophisticated **Digital Signal Processing (DSP)** pipeline built on the Web Audio API.
+Waverr runs a custom processing pipeline built on the Web Audio API:
 
-* **10-Band Parametric Equalizer**: 
-  * *Tech:* A non-linear chain of `BiquadFilterNodes` with high-precision `Q-factor` algorithms.
-  * *Intuition:* Professional-grade frequency sculpting. Boost the low-end or sharpen the mids with 10 surgical bands.
-* **Dynamic Range Compression**: 
-  * *Tech:* Look-ahead compression for real-time signal normalization and inter-sample peak prevention.
-  * *Intuition:* Smart volume protection. It prevents audio "clipping" when you push the EQ to the limit.
-* **Real-time Spectrogram**: 
-  * *Tech:* 2048-bin Fast Fourier Transform (FFT) visualizers synced to **V-Sync** render cycles.
-  * *Intuition:* A butter-smooth, high-speed visualizer that reacts instantly to every beat.
+- **10-Band Parametric Equalizer**: A chain of `BiquadFilterNodes` with precise Q-factor controls for tuning frequency bands.
+- **Dynamic Range Compression**: Look-ahead compression for volume normalization and audio clipping prevention.
+- **Real-time Spectrogram**: 2048-bin Fast Fourier Transform (FFT) visualizer synced to V-Sync display refresh rates.
 
 ---
 
 ### 🛠️ Technical Architecture
 
-| Layer | Stack | Technical Implementation |
+| Layer | Stack | Implementation Details |
 | :--- | :--- | :--- |
-| **`VIEW ENGINE`** | <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"> | **Atomic CSS Architecture:** GPU-accelerated backdrop filters and hardware-optimized 40px Gaussian blurs. |
-| **`LOGIC LAYER`** | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"> | **Async Concurrency:** Non-blocking event loops and multi-threaded metadata extraction via Web Workers. |
-| **`AUDIO DSP`** | <img src="https://img.shields.io/badge/Chrome-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white"> <img src="https://img.shields.io/badge/Web_Audio-FF0000?style=for-the-badge&logo=soundcharts&logoColor=white"> | **Modular Signal Routing:** Cascading filter nodes providing direct hardware-level control over audio buffers. |
-| **`PERSISTENCE`** | <img src="https://img.shields.io/badge/IndexedDB-4479A1?style=for-the-badge&logo=sqlite&logoColor=white"> <img src="https://img.shields.io/badge/PWA-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white"> | **Binary VFS Storage:** Transactional BLOB storage for total offline parity and sub-millisecond track recall. |
-| **`PERFORMANCE`** | <img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=google-fonts&logoColor=white"> | **Contextual Indexing:** Sub-5ms retrieval for 10k+ tracks via O(log n) inverted index algorithms. |
+| **`UI`** | <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"> | Responsive layout styled with Tailwind CSS and backdrop blurs. |
+| **`LOGIC`** | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"> | Multi-threaded metadata extraction running in Web Workers to prevent main-thread UI blocking. |
+| **`AUDIO DSP`** | <img src="https://img.shields.io/badge/Chrome-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white"> <img src="https://img.shields.io/badge/Web_Audio-FF0000?style=for-the-badge&logo=soundcharts&logoColor=white"> | Web Audio API node routing for real-time equalization and visualizers. |
+| **`STORAGE`** | <img src="https://img.shields.io/badge/IndexedDB-4479A1?style=for-the-badge&logo=sqlite&logoColor=white"> <img src="https://img.shields.io/badge/PWA-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white"> | IndexedDB BLOB storage for offline file persistence and track retrieval. |
+| **`SEARCH`** | <img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=google-fonts&logoColor=white"> | Inverted index search algorithm for fast querying across large music libraries. |
 
 ---
 
-### ⚡ Performance Benchmarks
+### ⚡ Performance Metrics
 
-* **Library Capacity**: Verified support for **10,000+ tracks** (~85GB VFS).
-* **Search Latency**: `< 5ms` instant recall—search through thousands of songs instantly.
-* **Indexing Speed**: ~1,200 tracks per minute via non-blocking binary header parsing.
-* **Memory Footprint**: Efficient heap management keeping usage under **70MB**.
+- **Library Support**: Tested up to **10,000+ tracks** (~85GB local storage).
+- **Search Latency**: `< 5ms` query response time across large libraries.
+- **Indexing Speed**: ~1,200 tracks per minute via background header parsing.
+- **Memory Usage**: Stays under **70MB** during playback.
 
 ---
 
-### 🚀 How To Use
+### 🚀 Getting Started
 
-#### 1️⃣ Installation
-**Option A: Git (Source Control)**
+#### 1️⃣ Setup
+**Option A: Clone Repository**
 ```bash
 git clone https://github.com/Owie6789/waverr-preview.git
 ```
 
-**Option B: ZIP (Direct Download)**
-1. Click the green **"Code"** dropdown at the top of this repository.
-2. Select **"Download ZIP"** and extract the folder.
+**Option B: Direct Download**
+1. Click the green **"Code"** button at the top of this repository.
+2. Select **"Download ZIP"** and extract the files.
 
-#### 2️⃣ Runtime Initialization
-* **Environment**: Launch `index.html` via any modern browser (Chrome, Edge, or Brave). **No internet required.**
-* **Ingestion**: Simply **Drag and Drop** your music folders into the player. The automated engine will immediately begin indexing.
+#### 2️⃣ Running the App
+- **Browser**: Open `index.html` in any modern web browser (Chrome, Edge, Brave). No server setup or internet connection required.
+- **Adding Music**: Drag and drop your audio folders or files directly into the window to index them into your library.
 
 ---
 
-### 🤝 Contributions & QA
+### 🤝 Contributing
 
-* **Suggest Improvements**: [Open an Issue](https://github.com/Owie6789/waverr-preview/issues) and label it as an "Enhancement".
-* **Report Exceptions**: [Submit a Bug Report](https://github.com/Owie6789/waverr-preview/issues) with reproduction steps.
+- **Feature Requests**: [Open an Issue](https://github.com/Owie6789/waverr-preview/issues) and apply the "Enhancement" label.
+- **Bug Reports**: [Submit a Bug Report](https://github.com/Owie6789/waverr-preview/issues) with reproduction steps.
 
 ---
 
@@ -112,7 +111,7 @@ git clone https://github.com/Owie6789/waverr-preview.git
 ---
 
 <p align="center">
-  Built, Coded and Engineered with ❤️ by <strong>Owie Emmanuel</strong><br />
+  Built by <strong>Owie Emmanuel</strong><br />
   <em>Software Engineer | UI/UX Designer</em><br />
   <a href="https://github.com/Owie6789">
     <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=flat&logo=github" alt="GitHub" />
@@ -123,7 +122,7 @@ git clone https://github.com/Owie6789/waverr-preview.git
 
 <div align="center">
   <p style="opacity: 0.8;">
-    💡 <strong>Tip:</strong> To source watermark-free audio for your local Waverr library, use these verified utilities:
+    💡 <strong>Note:</strong> Utilities for downloading local audio files for offline use:
   </p>
   <p>
     <img src="https://www.google.com/s2/favicons?domain=spotify.com&sz=16" width="12"> <a href="https://spotify-downloader.com" style="color: inherit; text-decoration: none;">Spotify-Downloader</a> | 
